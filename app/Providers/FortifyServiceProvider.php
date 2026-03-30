@@ -29,6 +29,9 @@ class FortifyServiceProvider extends ServiceProvider
         $this->configureActions();
         $this->configureViews();
         $this->configureRateLimiting();
+
+        Fortify::redirects('login', '/workspace');
+        Fortify::redirects('register', '/workspace');
     }
 
     /**
